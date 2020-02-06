@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AdminForm = ({id: key, majRecette, recettes}) => {
+const AdminForm = ({id: key, majRecette, recettes, supprimerRecette}) => {
     const recette = recettes[key];
 
     const handleChange = (event, key) => {
@@ -43,7 +43,7 @@ const AdminForm = ({id: key, majRecette, recettes}) => {
                 />
                 
             </form>
-            <button>Supprimer</button>
+            <button onClick={() => supprimerRecette(key)}>Supprimer</button>
         </div>
     );
 }
